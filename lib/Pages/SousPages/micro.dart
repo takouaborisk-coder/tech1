@@ -39,7 +39,7 @@ class _MicrosState extends State<Micros> {
                       return Stack(
                           children: [ClipRRect(
                             borderRadius: BorderRadius.circular(15),
-                            child: Image.network(posts[index]['image'], fit: BoxFit.cover,),
+                            child: Image.network(posts[index]['urlToImage'], fit: BoxFit.cover,),
                           ),
                           ]);
                     }, separatorBuilder: (BuildContext context, int index) { return SizedBox(width: 10,); },
@@ -56,9 +56,9 @@ class _MicrosState extends State<Micros> {
                       return ListTile(
                         title: Text(article['title'] ?? '', style: TextStyle(fontWeight: FontWeight.w600),),
                         subtitle: Text(article['description'] ?? ''),
-                        leading: article['image'] != null
+                        leading: article['urlToImage'] != null
                             ? Image.network(
-                          article['image'],
+                          article['urlToImage'],
                           height: 200,
                           width: 100,
                           fit: BoxFit.cover,

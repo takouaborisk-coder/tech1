@@ -7,9 +7,9 @@ import 'package:http/http.dart' as http;
 
 
 Future<List<dynamic>> fetchpost({required String mobile}) async {
-  String private = 'cbbd3453ef14ec3c9c9f6a571b5d2f24';
+  String private = '561a1b0307574c86a596ce23c1800c29';
 
-  final response = await http.get(Uri.parse('https://gnews.io/api/v4/search?q=$mobile&lang=fr&max=10&apikey=$private'));
+  final response = await http.get(Uri.parse('https://newsapi.org/v2/everything?q=$mobile&lang=fr&max=10&apikey=$private'));
 
   if (response.statusCode == 200){
     final data = json.decode(response.body);

@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="tech1"
+        android:label="TechApp"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
